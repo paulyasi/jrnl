@@ -25,6 +25,12 @@ print editor
 
 new_jrnl_file = folder+"/"+time.strftime("%Y-%m-%d_%H%M")
 
+heading = time.strftime("%A, %B %d %Y, %I:%M %p")
+
+f = open(new_jrnl_file,'w')
+f.write(heading)
+f.close()
+
 print new_jrnl_file
 
 subprocess.call([editor, new_jrnl_file])
